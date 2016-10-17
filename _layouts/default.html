@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
-    <body>
-        {% include navbar.html %}
-        {% include top.html %}
-        {% include about.html %}
-        {% include instagram.html %}
-        {% include contacts.html %}
-        {% include copyright.html %}
-        {% include tracking.html %}
-    </body>
+
+{% include head.html %}
+
+<body>
+
+    {% include loader.html %}
+
+    <main id="sb-site">
+
+        <div class="container">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+
+            {% include pagination.html %}
+
+            {% include next.html %}
+
+        </div>
+
+    </main>
+
+    {% include sidebar.html %}
+
+    {% include js.html %}
+
+</body>
+
 </html>

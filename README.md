@@ -1,64 +1,116 @@
-# Jekyll Instagram Portfolio Theme
+Travelogue
+==========
+[![Live Demo](http://img.shields.io/badge/Travelogue-DEMO-7D8866.svg?style=flat)](https://salgnt.github.io/Travelogue)&nbsp;
+[![The MIT License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](#license)&nbsp;
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SalGnt/Travelogue?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-Clean, minimalistic and responsive portfolio theme for Jekyll powered by Bootstrap 4.
-For the portfolio section is used Instagram widget, but you can easily update it with another content source.
+Travelogue is a minimal, single-column [Jekyll](http://jekyllrb.com/) theme that provides an immersive read experience for your readers.
 
-## Live Demo
+![Post](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Post.png)
 
-https://portfolio-central.github.io/jekyll-instagram-portfolio-theme/
-![Jekyll Instagram Portfolio Theme](./screenshot.png "Jekyll Instagram Portfolio Theme")
 
-## Powered by
+## Getting Started
+The theme provides a complete Jekyll setup. Download it and start the Jekyll server.
 
-- [Jekyll](https://jekyllrb.com/)
-- [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
-- [jQuery](https://jquery.com/)
-- [SnapWidget](https://snapwidget.com)
-- [Google Fonts: Lobster](https://fonts.google.com/specimen/Lobster)
-- [Font Awesome](http://fontawesome.io/)
+    git clone https://github.com/SalGnt/Travelogue.git
+    cd Travelogue
+    jekyll serve
 
-## Installation
-Install Jekyll:
+Visit the [Jekyll website](http://jekyllrb.com/) for more information.
 
-```
-gem install jekyll bundler
-```
 
-Install bundle dependiencies:
+### Features
+* Minimal, content focused design;
+* Responsive and mobile friendly;
+* Integrated slideshow activated on page scroll;
+* Customizable share buttons;
+* Disqus integration;
 
-```
-bundle install
-```
+#### Sidebar
+A link of each page will be added to the menu integrated in the sidebar.
 
-When finished, run the dev server:
+![Post Header](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Sidebar.png)
 
-```
-bundle exec jekyll serve
-```
+#### Post Thumbnail
+The thumbnail can be added by specifying a path to an image in the front matter.
 
-or just:
+    thumb: http://yourdomain.com/public/images/post_title/thumb.jpeg
 
-```
-jekyll serve
+#### Backgrounds
+The theme has an integrated slideshow. Its control is attached to the scroll action on the page, as shown in the [original concept](http://on.be.net/1zUTXz0).
 
-```
-To stop the server, use `CTRL+C`.
+You can add one or more `backgrounds` in the front matter by using the syntax shown below.
 
-## Building front-end assets: styles and scripts
+    backgrounds:
+        - http://yourdomain.com/public/images/post_title/background_01.jpeg
+        - http://yourdomain.com/public/images/post_title/background_02.jpeg
+        - http://yourdomain.com/public/images/post_title/background_03.jpeg
+        - ...
 
-Install module dependencies:
+#### Info
+All the details about a post are located after its content. Tags and categories can be hidden by adding the following variables in the front matter.
 
-```
-npm install
-```
+    show_tags: false
+    show_categories: false
 
-Run the build script to generate updated front-end assets:
+You can also specify the author's name for each post by adding the following variable in the front matter.
 
-```
-npm run build
-```
+    author: John Doe
 
-Watch for changes and automatically rebuild assets (`CTRL+C` to stop):
-```
-npm run watch
-```
+![Post Footer](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Footer.png)
+
+#### Share Buttons
+The template make use of [RRSSB](https://github.com/kni-labs/rrssb). You can enable it in the `_config.yml` file.
+
+    share_buttons: true
+
+If you want you can also enable or disable each share button by editing the `# RRSSBB` section in the `_data/social.yml` file.
+
+#### Disqus
+The template let you use [Disqus](https://disqus.com). You can enable it in the `_config.yml` file.
+
+    disqus: true
+
+You should set your Disqus shortname under the `# Disqus` section in the `_data/social.yml` file.
+
+#### Next Post
+A link to the next post will be placed at the end of each post.
+
+
+# Authors
+Dmitry Zelinsky (Designer)
+
+* [Dribbble](https://dribbble.com/dddzzzru)
+* [Twitter](https://twitter.com/dddzzzru)
+
+Salvatore Gentile (Developer)
+
+* [GitHub](https://github.com/SalGnt)
+* [Twitter](https://twitter.com/_sgentile)
+* [Dribbble](https://dribbble.com/SalGnt)
+
+
+# License
+The theme is released under **The MIT License (MIT)**.
+
+    The MIT License (MIT)
+
+    Copyright (c) 2015 Salvatore Gentile
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
